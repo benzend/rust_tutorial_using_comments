@@ -39,21 +39,15 @@ fn main() {
     
         println!("Now processing...");
 
-        let is_negative: bool = if range_start < 0 { true } else { false };
-
-        // * Make negative ranges into positive 
-        let range_start: i16 = if range_start < 0 { range_start * -1 } else { range_start };
-        let range_end: i16 = if range_end < 0 { range_end * -1 } else { range_end };
-
         // * Rust doesn't handle ranges that go from smaller to larger e.g. 5..1
         // * the only way to handle this is by converting it to 1..5 and running .rev() on it
         if range_start > range_end {
             for n in (range_end..range_start + 1).rev() {
-                println!("{}{}", if is_negative { '-' } else { ' ' }, n);
+                println!("{}", n);
             };
         } else {
             for n in range_start..range_end + 1 {
-                println!("{}{}", if is_negative { '-' } else { ' ' }, n);
+                println!("{}", n);
             };
         };
     }
