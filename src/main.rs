@@ -3,12 +3,11 @@ use std::io;
 fn main() {
     loop {
         // * `mut` allows mutation
-        // * String::new(); sets you up with an empty string
+        // * String::new(); sets you up with an empty *string*
         let mut range_start = String::new();
         let mut range_end = String::new();
     
-        // * Note: the arguments here are *string literals*
-        // * vs the above which are strings.
+        // * Note: the arguments used here are *literals*
         println!("Please select a range of numbers.");
         println!("From integer: ");
     
