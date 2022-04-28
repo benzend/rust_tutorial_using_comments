@@ -4,10 +4,13 @@ fn main() {
     loop {
         // * `mut` allows mutation
         // * String::new(); sets you up with an empty *string*
+        // * in which, since Strings are mutable unlike literals, 
+        // * they get assigned to the heap
         let mut range_start = String::new();
         let mut range_end = String::new();
     
-        // * Note: the arguments used here are *literals*
+        // * Note: the arguments used here are *literals*, these 
+        // * are stored on the stack since they are immutable
         println!("Please select a range of numbers.");
         println!("From integer: ");
     
